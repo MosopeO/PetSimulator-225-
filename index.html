@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <head>
     <title>Pet Simulator</title>
 
@@ -16,10 +17,16 @@
     <script src="https://code.jquery.com/jquery-3.5.1.js"
         integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
 
+    <style>
+        body {
+            font-family: 'Brush Script MT', cursive;
+        }
+    </style>
 </head>
 
 <body>
-    <div class="container" id="form" style="border:rgba(255, 166, 0, 0.63); border-width:5px; border-style:solid;">
+    <audio src="audio/background1.mp3" id="background_audio" loop="loop"></audio>
+    <div class="container" id="maincontainer" style="border:rgba(255, 166, 0, 0.63); border-width:5px; border-style:solid;">
         <form>
             <h3>Pet Simulator</h3>
 
@@ -59,21 +66,32 @@
                 </label>
             </div>
 
-            <input type="image" id="help_btn" src="./img/help_btn.png" width="15px" height="30px">
+            <button type="button" id="help_btn" >
+                <img src="./img/help_btn.png" width="15px" height="30px">
+            </button>
+            
         </form>
 
-        <div class="container">
-            <p id="help_info"> 
+        <div class="container" id="help_info">
+            <h2>
                 Help info goes here!
-            </p>
+            </h2>
         </div>
     </div>
 
     <script>
+       function playAudio() {
+            console.log("in the function")
+            var audio = new Audio('audio/background1.mp3');
+            audio.play();  
+       }
+
         $("#help_btn").click(function () {
-            document.getElementById("form").style.display = "none";
-            console.log("somethign is happening")
-            document.getElementById("#help_info").style.display = "block";
+            console.log("you called")
+           // document.getElementById("container").style.display = "none";
+            //console.log("somethign is happening")
+            //document.getElementById("#help_info").style.display = "block";
+            $('#maincontainer').load('index.html #help_info');
         });
     </script>
 </body>

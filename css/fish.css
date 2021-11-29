@@ -5,11 +5,74 @@
 }
 
 body {
-  background-image: url('../img/new\ pfp.png');
-  background-size: 85% 95%;
-  background-repeat: no-repeat;
-  background-position-x: center;
-  background-position-y: center;
+background-image: url('../img/new_fish_bkgd.png');
+background-size: 100% 100%;
+background-repeat: no-repeat;
+background-position-x: center;
+background-position-y: center;
 }
 
+.btn-group-vertical {
+padding: 5px;
+width: 100px;
+align-items: center;
+top: 5%;
+left: 15%;
+}
 
+#fish {
+position: fixed;
+bottom: 40%;
+left: 25%;
+width: 125px;
+}
+
+#fish_speak{
+display: none;
+position: fixed;
+top: 30%;
+left: 35%;
+height: 100px;
+width: 100px;;
+}
+
+#fish_pet, #hoop, #zzz{
+display: none;
+position: fixed;
+top: 30%;
+left: 30%;
+width: 65px;
+height: 65px;
+}
+
+#zzz {
+left: 35%;
+top: 25%;
+}
+
+#hoop{
+top: 20%;
+left: 30%
+}
+
+#fish_clean{
+display: none;
+position: fixed;
+width: 125px;
+top: 47%;
+left: 33%;
+}
+
+button {
+  height: 50px;
+}
+
+#love_bar{
+  height: 30px;
+  width: 300px;
+}
+  
+#heart{
+  height: 50px;
+
+}

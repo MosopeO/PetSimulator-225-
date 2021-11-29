@@ -32,7 +32,7 @@ body {
   position: fixed;
   top: 37%;
   bottom: 30%;
-  left: 40%;
+  left: 33%;
 }
 
 #petHand, #yarn, #zzz{
@@ -62,5 +62,14 @@ body {
 }
 
 button {
+  height: 50px;
+}
+
+#love_bar{
+  height: 30px;
+  width: 300px;
+}
+  
+#heart{
   height: 50px;
 }

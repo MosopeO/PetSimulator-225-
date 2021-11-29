@@ -12,6 +12,12 @@
     <!-- Jquery library   ---->
     <script src="https://code.jquery.com/jquery-3.5.1.js"
         integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+
+    <style>
+        body {
+            font-family: 'Brush Script MT', cursive;
+        }
+    </style>
 </head>
 
 <body>
@@ -29,20 +35,27 @@
                 
             </div>
 
+            <div class="col-4">
+                <div class="row">
+                    <img src="img/heart.png" id="heart">
+                </div>
 
-          <div class="col-4">
+                <div class="row">
+                    <img src="img/bar.png" id="love_bar">
+                </div>
+
                 <div class="btn-group-vertical">
-                    <button type="button" class="btn btn-info" id="feed">Feed</button>
+                    <button style="background-color: rgb(245, 185, 227); border-radius: 15px;" type="button" class="btn" id="feed">Feed</button>
                     <br />
-                    <button type="button" class="btn btn-info" id="pet">Pet</button>
+                    <button style="background-color: rgb(218, 136, 193); border-radius: 15px;" type="button" class="btn" id="pet">Pet</button>
                     <br />
-                    <button type="button" class="btn btn-info" id="play">Play</button>
+                    <button style="background-color: rgb(196, 101, 168); border-radius: 15px;" type="button" class="btn" id="play">Play</button>
                     <br />
-                    <button type="button" class="btn btn-info" id="clean">Clean</button>
+                    <button style="background-color: rgb(173, 68, 141); border-radius: 15px;" type="button" class="btn" id="clean">Clean</button>
                     <br />
-                    <button type="button" class="btn btn-info" id="sleep">Sleep</button>
+                    <button style="background-color: rgb(128, 43, 103); border-radius: 15px;" type="button" class="btn" id="sleep">Sleep</button>
                     <br />
-                    <button type="button" class="btn btn-info" id="speak">Speak</button>
+                    <button style="background-color: rgb(116, 21, 88); border-radius: 15px;" type="button" class="btn" id="speak">Speak</button>
                 </div>
             </div>
         </div>
@@ -71,13 +84,15 @@
             }
 
             function sleep(){
-                document.getElementById("dog").src = "img/cat_sleep.png";
+                document.getElementById("dog").src = "img/dog_sleep.png";
                 setTimeout(function(){document.getElementById("dog").src = "img/dog.png";}, 10000);
                 show(document.getElementById("zzz"), 10000);
             }
 
             function speak(){
                 show(document.getElementById("dog_speak"), 3000);
+                var audio = new Audio('audio/animals_dog_bark_001.mp3');
+                audio.play();
             }
             
             function show(e, n) {

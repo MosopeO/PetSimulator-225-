@@ -2,7 +2,6 @@
 
 <head>
     <title>Cat</title>
-
     <link rel="stylesheet" type="text/css" href="css/cat.css">
 
     <!-- Bootstrap Css -->
@@ -12,37 +11,55 @@
     <!-- Jquery library   ---->
     <script src="https://code.jquery.com/jquery-3.5.1.js"
         integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <style>
+        body {
+            font-family: 'Brush Script MT', cursive;
+        }
+    </style>
 </head>
 
 <body>
     <div class="container-fluid d-flex h-100 flex-column">
         <div class="row flex-grow-1">
             <div class="col-8">
-                <img src="img/cat_speak.png" id="cat_speak" >
-                <img src="img/cat_yarn.png" id="yarn" >
+                <img src="img/cat_speak.png" id="cat_speak">
+                <img src="img/cat_yarn.png" id="yarn">
 
                 <img src="img/cat (1).png" id="cat">
 
                 <img src="img/Zzz.png" id="zzz">
-                <img src="img/dc_clean.png" id="shower" >
-                <img src="img/dc_pet.png" id="petHand" >
-                
+                <img src="img/dc_clean.png" id="shower">
+                <img src="img/dc_pet.png" id="petHand">
+
             </div>
 
+            <div class="col-4">
+                <div class="row">
+                    <img src="img/heart.png" id="heart">
+                </div>
 
-          <div class="col-4">
+                <div class="row">
+                    <img src="img/bar.png" id="love_bar">
+                </div>
+
                 <div class="btn-group-vertical">
-                    <button type="button" class="btn btn-info" id="feed">Feed</button>
+                    <button style="background-color: rgb(245, 185, 227); border-radius: 15px;" type="button" class="btn"
+                        id="feed">Feed</button>
                     <br />
-                    <button type="button" class="btn btn-info" id="pet">Pet</button>
+                    <button style="background-color: rgb(218, 136, 193); border-radius: 15px;" type="button" class="btn"
+                        id="pet">Pet</button>
                     <br />
-                    <button type="button" class="btn btn-info" id="play">Play</button>
+                    <button style="background-color: rgb(196, 101, 168); border-radius: 15px;" type="button" class="btn"
+                        id="play">Play</button>
                     <br />
-                    <button type="button" class="btn btn-info" id="clean">Clean</button>
+                    <button style="background-color: rgb(173, 68, 141); border-radius: 15px;" type="button" class="btn"
+                        id="clean">Clean</button>
                     <br />
-                    <button type="button" class="btn btn-info" id="sleep">Sleep</button>
+                    <button style="background-color: rgb(128, 43, 103); border-radius: 15px;" type="button" class="btn"
+                        id="sleep">Sleep</button>
                     <br />
-                    <button type="button" class="btn btn-info" id="speak">Speak</button>
+                    <button style="background-color: rgb(116, 21, 88); border-radius: 15px;" type="button" class="btn"
+                        id="speak">Speak</button>
                 </div>
             </div>
         </div>
@@ -54,35 +71,37 @@
             document.getElementById("sleep").addEventListener("click", sleep)
             document.getElementById("speak").addEventListener("click", speak, false)
 
-            function pet(){
+            function pet() {
 
             }
 
-            function pet(){
+            function pet() {
                 show(document.getElementById("petHand"), 5000);
             }
 
-            function play(){
+            function play() {
                 show(document.getElementById("yarn"), 5000);
             }
 
-            function clean(){
+            function clean() {
                 console.log("in the function");
                 show(document.getElementById("shower"), 5000);
             }
 
-            function sleep(){
+            function sleep() {
                 document.getElementById("cat").src = "img/cat_sleep.png";
-                setTimeout(function(){document.getElementById("cat").src = "img/cat (1).png";}, 10000);
+                setTimeout(function () { document.getElementById("cat").src = "img/cat (1).png"; }, 10000);
                 show(document.getElementById("zzz"), 10000);
             }
 
-            function speak(){
+            function speak() {
                 show(document.getElementById("cat_speak"), 3000);
+                var audio = new Audio('audio/animal_cat_meow.mp3');
+                audio.play();                    
             }
-            
+
             function show(e, n) {
-                setTimeout(function() {e.style.display = "none";}, n);
+                setTimeout(function () { e.style.display = "none"; }, n);
                 e.style.display = "block";
             }
 

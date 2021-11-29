@@ -14,10 +14,10 @@ input{
     border: #ded9e0;
 }
 
-#form{
+#maincontainer{
     width: 400px;
     align-content: center;
-    top: 5%;
+    top: 20px;
     border-radius: 25px;
     background-color: #e7b08270;
     margin-left: auto;
