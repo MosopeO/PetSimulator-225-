@@ -1,4 +1,3 @@
-//algorithm
 var lovePoints = 0;
 var feed = 0;
 var pet = 0;
@@ -10,7 +9,7 @@ var speak = 0;
 $('#msgBox').hide();
 
 $('#feed').click(function(){
-    lovePoints += 2;
+    lovePoints += 1;
     feed += 1;
     console.log(lovePoints + ", " + feed);
     if(feed%5 == 0){
@@ -42,7 +41,7 @@ $('#feed').click(function(){
     }
 });
 $('#pet').click(function(){
-    lovePoints -= 1;
+    lovePoints += 2;
     pet += 1;
     console.log(lovePoints + ", " + pet);
     if(lovePoints == 500){
@@ -69,7 +68,7 @@ $('#pet').click(function(){
     }
 });
 $('#play').click(function(){
-    lovePoints += 1;
+    lovePoints += 2;
     play += 1;
     console.log(lovePoints + ", " + play);
     if(play%5 == 0){
@@ -101,7 +100,7 @@ $('#play').click(function(){
     }
 });
 $('#clean').click(function(){
-    lovePoints += 2;
+    lovePoints += 1;
     clean += 1;
     console.log(lovePoints + ", " + clean);
     if(lovePoints == 500){
@@ -128,10 +127,10 @@ $('#clean').click(function(){
     }
 });
 $('#sleep').click(function(){
-    lovePoints += 1;
+    lovePoints += 2;
     sleep +=1;
     console.log(lovePoints + ", " + sleep);
-    if(sleep%25 == 0){
+    if(sleep%15 == 0){
         $('#msgBox').show();
         $('#message').text("Your pet needs to play");
         setTimeout(function() { $("#msgBox").hide(); }, 3000);
@@ -186,55 +185,3 @@ $('#speak').click(function(){
             document.getElementById('heart').animate([{transform: 'translateX(200px)'},{transform: 'translateX(250px)'}],{duration: 2500, fill: "forwards"});}
     }
 });
-
-
-//animation
-document.getElementById("feed").addEventListener("click", feed)
-document.getElementById("pet").addEventListener("click", pet, false)
-document.getElementById("play").addEventListener("click", play)
-document.getElementById("clean").addEventListener("click", clean)
-document.getElementById("sleep").addEventListener("click", sleep)
-document.getElementById("speak").addEventListener("click", speak, false)
-
-$('#pet').on('click', function () {
-    show(document.getElementById("fish_pet"), 5000);
-    console.log("pet called")
-});
-
-$('#play').on('click', function () {
-    show(document.getElementById("hoop"), 5000);
-});
-
-$('#clean').on('click', function () {
-    show(document.getElementById("fish_clean"), 5000);
-});
-
-$('#sleep').on('click', function () {
-    document.getElementById("fish").src = "img/fish_sleep.png";
-    setTimeout(function () { document.getElementById("fish").src = "img/fish.png"; }, 10000);
-    show(document.getElementById("zzz"), 10000);
-});
-
-$('#speak').on('click', function () {
-    show(document.getElementById("fish_speak"), 3000);
-});
-
-function show(e, n) {
-    setTimeout(function () { e.style.display = "none"; }, n);
-    e.style.display = "block";
-}
-
-$('#submit').on('click', function () {
-    document.getElementById('enterName').style.display = "none";
-    console.log(document.getElementById('myContainer').style.display)
-    document.getElementById('myContainer').style.display = "block";
-    console.log(document.getElementById('myContainer').style.display)
-    playAudio()
-});
-
-function playAudio() {
-    var audio = new Audio('audio/background1.mp3');
-    audio.loop = true;
-    audio.play();
-    console.log("playing audio")
-}
