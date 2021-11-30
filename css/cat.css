@@ -73,3 +73,11 @@ button {
 #heart{
   height: 50px;
 }
+
+#container{
+  display: none;
+}
+
+#submit{
+  display: block;
+}

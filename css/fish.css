@@ -1,5 +1,4 @@
 .center {
-  display: block;
   margin-left: auto;
   margin-right: auto;
 }
@@ -75,4 +74,14 @@ button {
 #heart{
   height: 50px;
 
+}
+
+#myContainer{
+  display: none;
+}
+
+#enterName{
+  display: block;
+  margin: auto;
+  border-radius: 10px;
 }

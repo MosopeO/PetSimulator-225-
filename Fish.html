@@ -14,7 +14,7 @@
         integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
 
     <style>
-        body{
+        body {
             font-family: 'Brush Script MT', cursive;
         }
     </style>
@@ -22,6 +22,9 @@
 
 <body>
     <div class="container-fluid d-flex h-100 flex-column">
+
+
+
         <div class="row flex-grow-1">
             <div class="col-8">
                 <img src="img/fish_speak.png" id="fish_speak">
@@ -32,75 +35,53 @@
                 <img src="img/Zzz.png" id="zzz">
                 <img src="img/fish_clean.png" id="fish_clean">
                 <img src="img/fish_pet.png" id="fish_pet">
-
-
             </div>
 
             <div class="col-4">
-                <div class="row">
-                    <img src="img/heart.png" id="heart">
-                </div>
+                <div class="container" id="enterName"
+                    style="border:rgba(255, 166, 0, 0.63); border-width:5px; border-style:solid;">
+                    <div class="form-group">
+                        <label for="pname">What is your Fish's name:</label>
+                        <input type="text" class="form-control" id="pname">
+                        <button type="submit" id="submit">Start</button>
+                    </div>
 
-                <div class="row">
-                    <img src="img/bar.png" id="love_bar">
-                </div>
+                    <div class="container" id="myContainer">
+                        <div class="row" >
+                            <img src="img/heart.png" id="heart">
+                        </div>
 
-                <div class="btn-group-vertical">
-                    <button style="background-color: rgb(245, 185, 227); border-radius: 15px;" type="button" class="btn" id="feed">Feed</button>
-                    <br />
-                    <button style="background-color: rgb(218, 136, 193); border-radius: 15px;" type="button" class="btn" id="pet">Pet</button>
-                    <br />
-                    <button style="background-color: rgb(196, 101, 168); border-radius: 15px;" type="button" class="btn" id="play">Play</button>
-                    <br />
-                    <button style="background-color: rgb(173, 68, 141); border-radius: 15px;" type="button" class="btn" id="clean">Clean</button>
-                    <br />
-                    <button style="background-color: rgb(128, 43, 103); border-radius: 15px;" type="button" class="btn" id="sleep">Sleep</button>
-                    <br />
-                    <button style="background-color: rgb(116, 21, 88); border-radius: 15px;" type="button" class="btn" id="speak">Speak</button>
+                        <div class="row">
+                            <img src="img/bar.png" id="love_bar">
+                        </div>
+
+                        <div class="btn-group-vertical">
+                            <button style="background-color: rgb(245, 185, 227); border-radius: 15px;" type="button"
+                                class="btn" id="feed">Feed</button>
+                            <br />
+                            <button style="background-color: rgb(218, 136, 193); border-radius: 15px;" type="button"
+                                class="btn" id="pet">Pet</button>
+                            <br />
+                            <button style="background-color: rgb(196, 101, 168); border-radius: 15px;" type="button"
+                                class="btn" id="play">Play</button>
+                            <br />
+                            <button style="background-color: rgb(173, 68, 141); border-radius: 15px;" type="button"
+                                class="btn" id="clean">Clean</button>
+                            <br />
+                            <button style="background-color: rgb(128, 43, 103); border-radius: 15px;" type="button"
+                                class="btn" id="sleep">Sleep</button>
+                            <br />
+                            <button style="background-color: rgb(116, 21, 88); border-radius: 15px;" type="button"
+                                class="btn" id="speak">Speak</button>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-        <script>
-            document.getElementById("feed").addEventListener("click", feed)
-            document.getElementById("pet").addEventListener("click", pet, false)
-            document.getElementById("play").addEventListener("click", play)
-            document.getElementById("clean").addEventListener("click", clean)
-            document.getElementById("sleep").addEventListener("click", sleep)
-            document.getElementById("speak").addEventListener("click", speak, false)
-
-            function pet() {
-
-            }
-
-            function pet() {
-                show(document.getElementById("fish_pet"), 5000);
-            }
-
-            function play() {
-                show(document.getElementById("hoop"), 5000);
-            }
-
-            function clean() {
-                show(document.getElementById("fish_clean"), 5000);
-            }
-
-            function sleep() {
-                document.getElementById("fish").src = "img/fish_sleep.png";
-                setTimeout(function () { document.getElementById("fish").src = "img/fish.png"; }, 10000);
-                show(document.getElementById("zzz"), 10000);
-            }
-
-            function speak() {
-                show(document.getElementById("fish_speak"), 3000);
-            }
-
-            function show(e, n) {
-                setTimeout(function () { e.style.display = "none"; }, n);
-                e.style.display = "block";
-            }
-
-        </script>
     </div>
+
+
+    <script src="js/fish.js"></script>
 </body>
 
 </html>

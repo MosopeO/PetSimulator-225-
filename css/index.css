@@ -16,13 +16,13 @@ input{
 
 #maincontainer{
     width: 400px;
-    align-content: center;
+    text-align: center;
+    color: #2f2457cb;
     top: 20px;
     border-radius: 25px;
     background-color: #e7b08270;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 5%;
+    margin: auto;
+    margin-top: 15px;
     padding: 5px;
 }
 
@@ -32,4 +32,20 @@ input{
 
 #help_info{
     display: none;
+}
+
+#login{
+    display: none;
+}
+
+#signup{
+    display: none;
+}
+
+#loginBtn, #signupBtn {
+    border-radius: 15px 15px;
+    width: 100px;
+    background-color: rgba(34, 35, 116, 0.76);
+    color: #ded9e0;
+    text-emphasis: bold;
 }

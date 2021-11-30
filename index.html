@@ -26,51 +26,104 @@
 
 <body>
     <audio src="audio/background1.mp3" id="background_audio" loop="loop"></audio>
-    <div class="container" id="maincontainer" style="border:rgba(255, 166, 0, 0.63); border-width:5px; border-style:solid;">
-        <form>
-            <h3>Pet Simulator</h3>
+    <div class="container" id="maincontainer"
+        style="border:rgba(255, 166, 0, 0.63); border-width:5px; border-style:solid;">
+        <div id="welcome">
+            <h2>welcome to our Pet Simulator</h2>
 
-            <p>
-                Your name:
-                <input type="text" id="Name">
-            </p>
+            <button type="button" id="loginBtn">Login</button>
+            <button type="button" id="signupBtn">Sign Up</button>
+           
+        </div>
 
-            <p>
-                Your pets name:
-                <input type="text" id="Pname">
-            </p>
+        <div id="login">
+            <form>
+                <h3>Login</h3>
 
-            <p>Choose your pet to get started: </p>
+                <p>
+                    Your name:
+                    <input type="text" id="Name">
+                </p>
 
-            <div class="form-check">
-                <label>
-                    <a href="Cat.html" class="btn btn-info" role="button">
-                        <img src="img/cat (1).png" width="60" height="60"> Cat
-                    </a>
-                </label>
-            </div>
+                <p>
+                    Password:
+                    <input type="text" id="Password">
+                </p>
 
-            <div class="form-check">
-                <label>
-                    <a href="Dog.html" class="btn btn-info" role="button">
-                        <img src="img/dog.png" width="60" height="60"> Dog
-                    </a>
-                </label>
-            </div>
+                <p>Choose your pet to get started: </p>
 
-            <div class="form-check">
-                <label>
-                    <a href="Fish.html" class="btn btn-info" role="button">
-                        <img src="img/fish.png" width="60" height="60"> Fish
-                    </a>
-                </label>
-            </div>
+                <div class="form-check">
+                    <label>
+                        <a href="Cat.html" class="btn btn-info" role="button">
+                            <img src="img/cat (1).png" width="60" height="60"> Cat
+                        </a>
+                    </label>
+                </div>
 
-            <button type="button" id="help_btn" >
-                <img src="./img/help_btn.png" width="15px" height="30px">
-            </button>
-            
-        </form>
+                <div class="form-check">
+                    <label>
+                        <a href="Dog.html" class="btn btn-info" role="button">
+                            <img src="img/dog.png" width="60" height="60"> Dog
+                        </a>
+                    </label>
+                </div>
+
+                <div class="form-check">
+                    <label>
+                        <a href="Fish.html" class="btn btn-info" role="button">
+                            <img src="img/fish.png" width="60" height="60"> Fish
+                        </a>
+                    </label>
+                </div>
+            </form>
+        </div>
+
+        <div id="signup">
+            <form>
+                <h3>Signup</h3>
+
+                <p>
+                    Your name:
+                    <input type="text" id="Name">
+                </p>
+
+                <p>
+                    Password:
+                    <input type="text" id="Password">
+                </p>
+
+                <p>Choose your pet to get started: </p>
+
+                <div class="form-check">
+                    <label>
+                        <a href="Cat.html" class="btn btn-info" role="button">
+                            <img src="img/cat (1).png" width="60" height="60"> Cat
+                        </a>
+                    </label>
+                </div>
+
+                <div class="form-check">
+                    <label>
+                        <a href="Dog.html" class="btn btn-info" role="button">
+                            <img src="img/dog.png" width="60" height="60"> Dog
+                        </a>
+                    </label>
+                </div>
+
+                <div class="form-check">
+                    <label>
+                        <a href="Fish.html" class="btn btn-info" role="button">
+                            <img src="img/fish.png" width="60" height="60"> Fish
+                        </a>
+                    </label>
+                </div>
+            </form>
+        </div>
+
+        <button type="button" id="help_btn">
+            <img src="./img/help_btn.png" width="15px" height="30px">
+        </button>
+
 
         <div class="container" id="help_info">
             <h2>
@@ -80,20 +133,20 @@
     </div>
 
     <script>
-       function playAudio() {
-            console.log("in the function")
-            var audio = new Audio('audio/background1.mp3');
-            audio.play();  
-       }
-
-        $("#help_btn").click(function () {
-            console.log("you called")
-           // document.getElementById("container").style.display = "none";
-            //console.log("somethign is happening")
-            //document.getElementById("#help_info").style.display = "block";
-            $('#maincontainer').load('index.html #help_info');
-        });
+        
     </script>
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.0.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.0.1/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.0.1/firebase-auth.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/8.0.1/firebase-analytics.js"></script>
+
+    <!--  Save and display data on real time  -->
+    <script src="js/index.js"></script>
 </body>
 
 </html>
