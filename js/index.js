@@ -44,3 +44,5 @@ $("#help_btn").click(function () {
         document.getElementById('help_info').style.display = "block";
     }
 });
+
+firebase.firestore().collection("SignUp").add("New input")
