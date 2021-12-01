@@ -31,6 +31,16 @@ function playAudio() {
 }
 
 $("#help_btn").click(function () {
-    console.log("you called")
-    
+    if (document.getElementById('help_info').style.display == "block") {
+        document.getElementById('welcome').style.display = "block";
+        document.getElementById('signup').style.display = "none";
+        document.getElementById('login').style.display = "none";
+        document.getElementById('help_info').style.display = "none";
+    }
+    else {
+        document.getElementById('welcome').style.display = "none";
+        document.getElementById('signup').style.display = "none";
+        document.getElementById('login').style.display = "none";
+        document.getElementById('help_info').style.display = "block";
+    }
 });

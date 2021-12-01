@@ -24,38 +24,56 @@
     <div class="container-fluid d-flex h-100 flex-column">
         <div class="row flex-grow-1">
             <div class="col-8">
-                <img src="img/dog_speak.png" id="dog_speak" >
-                <img src="img/dog_ball.png" id="ball" >
+                <img src="img/dog_speak.png" id="dog_speak">
+                <img src="img/dog_ball.png" id="ball">
 
                 <img src="img/dog.png" id="dog">
 
                 <img src="img/Zzz.png" id="zzz">
-                <img src="img/dc_clean.png" id="shower" >
-                <img src="img/dc_pet.png" id="petHand" >
-                
+                <img src="img/dc_clean.png" id="shower">
+                <img src="img/dc_pet.png" id="petHand">
+
             </div>
 
             <div class="col-4">
-                <div class="row">
-                    <img src="img/heart.png" id="heart">
+                <div class="container" id="enterName"
+                    style="border:rgba(10, 61, 27, 0.733); border-width:5px; border-style:solid;">
+                    <div class="form-group">
+                        <label for="pname">Enter your Dog's name:</label>
+                        <input type="text" class="form-control" id="pname">
+                        <br>
+                        <button type="submit" id="submit">Start</button>
+                    </div>
                 </div>
 
-                <div class="row">
-                    <img src="img/bar.png" id="love_bar">
-                </div>
+                <div id="myContainer">
+                    <div class="row">
+                        <img src="img/heart.png" id="heart">
+                    </div>
 
-                <div class="btn-group-vertical">
-                    <button style="background-color: rgb(245, 185, 227); border-radius: 15px;" type="button" class="btn" id="feed">Feed</button>
-                    <br />
-                    <button style="background-color: rgb(218, 136, 193); border-radius: 15px;" type="button" class="btn" id="pet">Pet</button>
-                    <br />
-                    <button style="background-color: rgb(196, 101, 168); border-radius: 15px;" type="button" class="btn" id="play">Play</button>
-                    <br />
-                    <button style="background-color: rgb(173, 68, 141); border-radius: 15px;" type="button" class="btn" id="clean">Clean</button>
-                    <br />
-                    <button style="background-color: rgb(128, 43, 103); border-radius: 15px;" type="button" class="btn" id="sleep">Sleep</button>
-                    <br />
-                    <button style="background-color: rgb(116, 21, 88); border-radius: 15px;" type="button" class="btn" id="speak">Speak</button>
+                    <div class="row">
+                        <img src="img/bar.png" id="love_bar">
+                    </div>
+
+                    <div class="btn-group-vertical">
+                        <button style="background-color: rgb(245, 185, 227); border-radius: 15px;" type="button"
+                            class="btn" id="feed">Feed</button>
+                        <br />
+                        <button style="background-color: rgb(218, 136, 193); border-radius: 15px;" type="button"
+                            class="btn" id="pet">Pet</button>
+                        <br />
+                        <button style="background-color: rgb(196, 101, 168); border-radius: 15px;" type="button"
+                            class="btn" id="play">Play</button>
+                        <br />
+                        <button style="background-color: rgb(173, 68, 141); border-radius: 15px;" type="button"
+                            class="btn" id="clean">Clean</button>
+                        <br />
+                        <button style="background-color: rgb(128, 43, 103); border-radius: 15px;" type="button"
+                            class="btn" id="sleep">Sleep</button>
+                        <br />
+                        <button style="background-color: rgb(116, 21, 88); border-radius: 15px;" type="button"
+                            class="btn" id="speak">Speak</button>
+                    </div>
                 </div>
                 <div id="msgBox" style="position: fixed; right: 260px; bottom: 80px; background-color: hsl(42, 90%, 55%); border: 5px solid hsl(37, 90%, 50%); border-radius: 15px; padding: 20px;">
                     <p id="message">
@@ -64,48 +82,9 @@
                 </div>
             </div>
         </div>
-        <script>
-            document.getElementById("feed").addEventListener("click", feed)
-            document.getElementById("pet").addEventListener("click", pet, false)
-            document.getElementById("play").addEventListener("click", play)
-            document.getElementById("clean").addEventListener("click", clean)
-            document.getElementById("sleep").addEventListener("click", sleep)
-            document.getElementById("speak").addEventListener("click", speak, false)
 
-            function pet(){
+        
 
-            }
-
-            function pet(){
-                show(document.getElementById("petHand"), 5000);
-            }
-
-            function play(){
-                show(document.getElementById("ball"), 5000);
-            }
-
-            function clean(){
-                show(document.getElementById("shower"), 5000);
-            }
-
-            function sleep(){
-                document.getElementById("dog").src = "img/dog_sleep.png";
-                setTimeout(function(){document.getElementById("dog").src = "img/dog.png";}, 10000);
-                show(document.getElementById("zzz"), 10000);
-            }
-
-            function speak(){
-                show(document.getElementById("dog_speak"), 3000);
-                var audio = new Audio('audio/animals_dog_bark_001.mp3');
-                audio.play();
-            }
-            
-            function show(e, n) {
-                setTimeout(function() {e.style.display = "none";}, n);
-                e.style.display = "block";
-            }
-
-        </script>
         <script src="js/dog.js"></script>
     </div>
 </body>

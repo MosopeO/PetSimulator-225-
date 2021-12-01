@@ -74,10 +74,20 @@ button {
   height: 50px;
 }
 
-#container{
+#myContainer{
   display: none;
 }
 
-#submit{
+#enterName{
   display: block;
+  margin: auto;
+  border-radius: 10px;
+  text-align: center;
+  margin-top: 20px;
+}
+
+#submit{
+  border-radius: 10px;
+  background-color: rgb(10, 61, 27);
+  color: white;
 }

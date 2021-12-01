@@ -188,14 +188,6 @@ $('#speak').click(function(){
 });
 
 
-//animation
-document.getElementById("feed").addEventListener("click", feed)
-document.getElementById("pet").addEventListener("click", pet, false)
-document.getElementById("play").addEventListener("click", play)
-document.getElementById("clean").addEventListener("click", clean)
-document.getElementById("sleep").addEventListener("click", sleep)
-document.getElementById("speak").addEventListener("click", speak, false)
-
 $('#pet').on('click', function () {
     show(document.getElementById("fish_pet"), 5000);
     console.log("pet called")
@@ -226,9 +218,8 @@ function show(e, n) {
 
 $('#submit').on('click', function () {
     document.getElementById('enterName').style.display = "none";
-    console.log(document.getElementById('myContainer').style.display)
     document.getElementById('myContainer').style.display = "block";
-    console.log(document.getElementById('myContainer').style.display)
+    console.log( document.getElementById('pname').value)
     playAudio()
 });
 
