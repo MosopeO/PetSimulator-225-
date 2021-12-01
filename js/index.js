@@ -45,4 +45,4 @@ $("#help_btn").click(function () {
     }
 });
 
-firebase.firestore().collection("SignUp").add("New input")
+firebase.firestore().collection("SignUp").add("Name: name")
