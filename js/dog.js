@@ -1,25 +1,26 @@
 
 $('#pet').on('click', function () {
-    show(document.getElementById("fish_pet"), 5000);
-    console.log("pet called")
+    show(document.getElementById("petHand"), 5000);
 });
 
 $('#play').on('click', function () {
-    show(document.getElementById("hoop"), 5000);
+    show(document.getElementById("ball"), 5000);
 });
 
 $('#clean').on('click', function () {
-    show(document.getElementById("fish_clean"), 5000);
+    show(document.getElementById("shower"), 5000);
 });
 
 $('#sleep').on('click', function () {
-    document.getElementById("fish").src = "img/fish_sleep.png";
-    setTimeout(function () { document.getElementById("fish").src = "img/fish.png"; }, 10000);
+    document.getElementById("dog").src = "img/dog_sleep.png";
+    setTimeout(function () { document.getElementById("dog").src = "img/dog.png"; }, 10000);
     show(document.getElementById("zzz"), 10000);
 });
 
 $('#speak').on('click', function () {
-    show(document.getElementById("fish_speak"), 3000);
+    show(document.getElementById("dog_speak"), 3000);
+    var audio = new Audio('audio/animals_dog_bark_001.mp3');
+    audio.play();
 });
 
 function show(e, n) {

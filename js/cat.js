@@ -1,25 +1,26 @@
-
 $('#pet').on('click', function () {
-    show(document.getElementById("fish_pet"), 5000);
-    console.log("pet called")
+    show(document.getElementById("petHand"), 5000);
 });
 
 $('#play').on('click', function () {
-    show(document.getElementById("hoop"), 5000);
+    show(document.getElementById("yarn"), 5000);
 });
 
 $('#clean').on('click', function () {
-    show(document.getElementById("fish_clean"), 5000);
+    console.log("in the function");
+    show(document.getElementById("shower"), 5000);
 });
 
 $('#sleep').on('click', function () {
-    document.getElementById("fish").src = "img/fish_sleep.png";
-    setTimeout(function () { document.getElementById("fish").src = "img/fish.png"; }, 10000);
+    document.getElementById("cat").src = "img/cat_sleep.png";
+    setTimeout(function () { document.getElementById("cat").src = "img/cat (1).png"; }, 10000);
     show(document.getElementById("zzz"), 10000);
 });
 
 $('#speak').on('click', function () {
-    show(document.getElementById("fish_speak"), 3000);
+    show(document.getElementById("cat_speak"), 3000);
+    var audio = new Audio('audio/animal_cat_meow.mp3');
+    audio.play();
 });
 
 function show(e, n) {
@@ -30,7 +31,7 @@ function show(e, n) {
 $('#submit').on('click', function () {
     document.getElementById('enterName').style.display = "none";
     document.getElementById('myContainer').style.display = "block";
-    console.log( document.getElementById('pname').value)
+    console.log(document.getElementById('pname').value)
     playAudio()
 });
 
