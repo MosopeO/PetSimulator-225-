@@ -29,12 +29,15 @@
             <div class="col-8">
                 <img src="img/fish_speak.png" id="fish_speak">
                 <img src="img/fish_hoop.png" id="hoop">
-
+                <img src="img/fish_tank_skull.png" id="skull">
                 <img src="img/fish.png" id="fish">
-
+                <img src="img/fish_food.png" id="food">
                 <img src="img/Zzz.png" id="zzz">
                 <img src="img/fish_clean.png" id="fish_clean">
                 <img src="img/fish_pet.png" id="fish_pet">
+                <p id="displayName">
+
+                </p>
             </div>
 
             <div class="col-4">
@@ -42,7 +45,7 @@
                     style="border:rgba(10, 61, 27, 0.733); border-width:5px; border-style:solid;">
                     <div class="form-group">
                         <label for="pname">Enter your Fish's name:</label>
-                        <input type="text" class="form-control" id="pname">
+                        <input type="text" class="form-control" id="pname" maxlength="12">
                         <br>
                         <button type="submit" id="submit">Start</button>
                     </div>
@@ -85,6 +88,42 @@
                         <p id="message">
 
                         </p>
+                    <div class="container" id="myContainer">
+                        <div class="row" >
+                            <img src="img/heart.png" id="heart">
+                        </div>
+
+                        <div class="row">
+                            <img src="img/bar.png" id="love_bar">
+                            <p id="points">
+                            
+                            </p>
+                        </div>
+
+                        <div class="btn-group-vertical">
+                            <button style="background-color: rgb(245, 185, 227); border-radius: 15px;" type="button"
+                                class="btn" id="feed">Feed</button>
+                            <br />
+                            <button style="background-color: rgb(218, 136, 193); border-radius: 15px;" type="button"
+                                class="btn" id="pet">Pet</button>
+                            <br />
+                            <button style="background-color: rgb(196, 101, 168); border-radius: 15px;" type="button"
+                                class="btn" id="play">Play</button>
+                            <br />
+                            <button style="background-color: rgb(173, 68, 141); border-radius: 15px;" type="button"
+                                class="btn" id="clean">Clean</button>
+                            <br />
+                            <button style="background-color: rgb(128, 43, 103); border-radius: 15px;" type="button"
+                                class="btn" id="sleep">Sleep</button>
+                            <br />
+                            <button style="background-color: rgb(116, 21, 88); border-radius: 15px;" type="button"
+                                class="btn" id="speak">Speak</button>
+                        </div>
+                        <div id="msgBox" style="position: fixed; right: 260px; bottom: 80px; background-color: hsl(42, 90%, 55%); border: 5px solid hsl(37, 90%, 50%); border-radius: 15px; padding: 20px;">
+                            <p id="message">
+        
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>

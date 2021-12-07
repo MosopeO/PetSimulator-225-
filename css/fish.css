@@ -26,6 +26,13 @@ left: 25%;
 width: 125px;
 }
 
+#displayName{
+  position: fixed;
+  left: 30%;
+  top: 63%;
+  color: white
+}
+
 #fish_speak{
 display: none;
 position: fixed;
@@ -62,6 +69,22 @@ top: 47%;
 left: 33%;
 }
 
+#skull{
+  width: 65px;
+  height: auto;
+  position: fixed;
+  bottom: 39.6%;
+  left: 34%;
+}
+
+#food{
+  width:90px;
+  height: auto;
+  position: fixed;
+  right: 30%;
+  top: 15%;
+}
+
 button {
   height: 50px;
 }
@@ -73,7 +96,10 @@ button {
   
 #heart{
   height: 50px;
+}
 
+#points{
+  display: visible;
 }
 
 #myContainer{
