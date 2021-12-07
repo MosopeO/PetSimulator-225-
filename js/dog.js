@@ -13,13 +13,13 @@ firebase.initializeApp(firebaseConfig);
 
 
 var lovePoints = 0;
-        var feed = 0;
-        var pet = 0;
-        var play = 0;
-        var clean = 0;
-        var sleep = 0;
-        var speak = 0;
-var docid="";
+var feed = 0;
+var pet = 0;
+var play = 0;
+var clean = 0;
+var sleep = 0;
+var speak = 0;
+var docid = "";
 
 //auth
 firebase.auth().onAuthStateChanged((user) => {
@@ -27,8 +27,6 @@ firebase.auth().onAuthStateChanged((user) => {
         console.log(user.email);
         let email = user.email;
         let firsttime = 0;
-
-
 
         firebase
             .firestore()
@@ -39,23 +37,14 @@ firebase.auth().onAuthStateChanged((user) => {
                     console.log(doc.data());
                     console.log(doc.data().Name);
                     console.log(doc.data().Points);
-                    if (doc.data().Name == user.email){
+                    if (doc.data().Name == user.email) {
                         firsttime += 1;
                         lovePoints = doc.data().Points;
-                        docid =doc.id;
+                        docid = doc.id;
                         console.log(doc.id);
                     }
-
-                    
-
                 });
             });
-
-
-
-
-
-        
 
         $('#msgBox').hide();
 
@@ -96,6 +85,7 @@ firebase.auth().onAuthStateChanged((user) => {
                 }
             }
         });
+
         $('#pet').click(function () {
             lovePoints += 2;
             pet += 1;
@@ -128,6 +118,7 @@ firebase.auth().onAuthStateChanged((user) => {
                 }
             }
         });
+
         $('#play').click(function () {
             lovePoints += 2;
             play += 1;
@@ -165,6 +156,7 @@ firebase.auth().onAuthStateChanged((user) => {
                 }
             }
         });
+
         $('#clean').click(function () {
             lovePoints += 1;
             clean += 1;
@@ -197,6 +189,7 @@ firebase.auth().onAuthStateChanged((user) => {
                 }
             }
         });
+
         $('#sleep').click(function () {
             lovePoints += 2;
             sleep += 1;
@@ -234,6 +227,7 @@ firebase.auth().onAuthStateChanged((user) => {
                 }
             }
         });
+
         $('#speak').click(function () {
             lovePoints += 1;
             speak += 1;
@@ -266,7 +260,6 @@ firebase.auth().onAuthStateChanged((user) => {
                 }
             }
         });
-
 
         $('#pet').on('click', function () {
             show(document.getElementById("petHand"), 5000);
@@ -301,7 +294,7 @@ firebase.auth().onAuthStateChanged((user) => {
             document.getElementById('enterName').style.display = "none";
             document.getElementById('myContainer').style.display = "block";
             console.log(document.getElementById('pname').value)
-            //playAudio()
+            playAudio()
         });
 
         function playAudio() {
@@ -313,17 +306,13 @@ firebase.auth().onAuthStateChanged((user) => {
 
         $('#save').on('click', function () {
             let petNm = document.getElementById('pname').value;
-            if(firsttime == 0){
-                firebase.firestore().collection("Points").add({ Name: email, Points: lovePoints });  }
-            else{
+            if (firsttime == 0) {
+                firebase.firestore().collection("Points").add({ Name: email, Points: lovePoints });
+            }
+            else {
                 firebase.firestore().collection("Points").doc(docid).update({ Points: lovePoints });
             }
         });
-
-
-
-
-
 
     } else {
         console.log("NO logged in");
