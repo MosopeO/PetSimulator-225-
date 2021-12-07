@@ -27,6 +27,13 @@ body {
   width: 125px;
 }
 
+#displayName{
+  position: fixed;
+  right: 35%;
+  bottom: 21.5%;
+  color: white;
+}
+
 #cat_speak{
   display: none;
   position: fixed;
@@ -50,7 +57,7 @@ body {
 
 #yarn{
   top: 90%;
-  left: 45%
+  left: 45%;
 }
 
 #shower{
@@ -59,6 +66,22 @@ body {
   width: 125px;
   top: 47%;
   left: 33%;
+}
+
+#collar{
+  width: 60px;
+  height: auto;
+  position: fixed;
+  bottom: 21%;
+  left: 30.8%;
+}
+
+#food{
+  width:50px;
+  height: auto;
+  position: fixed;
+  right: 30%;
+  top: 15%;
 }
 
 button {
