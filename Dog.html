@@ -73,6 +73,9 @@
                         <br />
                         <button style="background-color: rgb(116, 21, 88); border-radius: 15px;" type="button"
                             class="btn" id="speak">Speak</button>
+
+                            <button style="background-color: rgb(116, 21, 88); border-radius: 15px;" type="button"
+                            class="btn" id="save">Save Points</button>
                     </div>
                 </div>
                 <div id="msgBox" style="position: fixed; right: 260px; bottom: 80px; background-color: hsl(42, 90%, 55%); border: 5px solid hsl(37, 90%, 50%); border-radius: 15px; padding: 20px;">
@@ -83,7 +86,14 @@
             </div>
         </div>
 
-        
+        <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.0.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.0.1/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.0.1/firebase-auth.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/8.0.1/firebase-analytics.js"></script>
 
         <script src="js/dog.js"></script>
     </div>

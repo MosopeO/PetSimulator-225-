@@ -9,13 +9,13 @@ p, h3{
 }
 
 input{
-    width: 75px;
+    
     border-radius: 5px;
     border: #ded9e0;
 }
 
 #maincontainer{
-    width: 400px;
+    width: 500px;
     text-align: center;
     color: #2f2457cb;
     top: 20px;
@@ -28,6 +28,7 @@ input{
 
 #help_btn{
     margin-left: 70%;
+    height: 55px;
 }
 
 #help_info{

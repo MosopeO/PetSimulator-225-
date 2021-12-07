@@ -32,7 +32,7 @@
 
             <button type="button" id="loginBtn">Login</button>
             <button type="button" id="signupBtn">Sign Up</button>
-           
+
         </div>
 
         <div id="login">
@@ -46,7 +46,7 @@
 
                 <p>
                     Password:
-                    <input type="text" id="Password">
+                    <input type="text" id="password">
                 </p>
 
                 <p>Choose your pet to get started: </p>
@@ -81,47 +81,47 @@
             <form>
                 <h3>Signup</h3>
 
-                <p>
-                    Your name:
-                    <input type="text" id="Name">
+                <p>Username:
+                    <input type="name" autocomplete="off"name="name" id="name" maxlength="20" value ="name2@mail.com" required />
                 </p>
 
-                <p>
-                    Password:
-                    <input type="text" id="Password">
+                <p>Username:
+                    <input type="name" autocomplete="off"name="name" id="name" maxlength="20" value ="name@mail.com" required />
+                </p>
+
+                <p>Password:
+                    <input type="password" autocomplete="off" name="password" id="password" maxlength="20" required />
+                </p>
+
+                
+                <p>Confirm your password:
+                    <input type="password" autocomplete="off" name="cpassword" id="cpassword" maxlength="20" required />
                 </p>
 
                 <p>Choose your pet to get started: </p>
 
-                <div class="form-check">
-                    <label>
-                        <a href="Cat.html" class="btn btn-info" role="button">
-                            <img src="img/cat (1).png" width="60" height="60"> Cat
-                        </a>
-                    </label>
-                </div>
+                <INPUT TYPE="Radio" name="pet" id="Cat" value="Cat">
+                <label for="Cat">                    
+                    <img src="img/cat (1).png" width="60" height="60"> Cat
+                </label>
+                <br>
+                
+                <INPUT TYPE="Radio" name="pet" id="Dog" value="Dog">
+                <label for="Dog">                   
+                    <img src="img/dog.png" width="60" height="60"> Dog
+                </label>
+                <br>
 
-                <div class="form-check">
-                    <label>
-                        <a href="Dog.html" class="btn btn-info" role="button">
-                            <img src="img/dog.png" width="60" height="60"> Dog
-                        </a>
-                    </label>
-                </div>
-
-                <div class="form-check">
-                    <label>
-                        <a href="Fish.html" class="btn btn-info" role="button">
-                            <img src="img/fish.png" width="60" height="60"> Fish
-                        </a>
-                    </label>
-                </div>
+                <INPUT TYPE="Radio" name="pet" id="Fish"  value="Fish">
+                <label for="Fish">
+                    <img src="img/fish.png" width="60" height="60"> Fish
+                </label>
+                
+            <p>
+                <input type="button" value="Submit" id="signUp" />
+            </p>
             </form>
         </div>
-
-       <!-- <button type="button" id="help_btn">
-            <img src="./img/help_btn.png" width="15px" height="30px">
-        </button>n-->
 
         <br>
         <input type="image" id="help_btn" src="./img/help_btn.png" >
@@ -129,13 +129,13 @@
 
         <div class="container" id="help_info">
             <h5>
-                Welcome to Pet Simulator! 
+                Welcome to Pet Simulator!
                 <br>
                 To start, sign up and select a pet or sign in if you are a returning member.
                 <br>
-                Once you have your pet, your goal is to max out the love bar with 500 love points. 
+                Once you have your pet, your goal is to max out the love bar with 500 love points.
                 <br>
-                Each action you take will add or subtract points from your total. 
+                Each action you take will add or subtract points from your total.
                 <br>
                 To take an action, click the button. Most importantly, have loads of fun with your new pal!
             </h5>
@@ -143,7 +143,7 @@
     </div>
 
     <script>
-        
+
     </script>
 
     <!-- The core Firebase JS SDK is always required and must be listed first -->
