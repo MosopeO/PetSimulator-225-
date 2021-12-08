@@ -30,7 +30,7 @@ firebase.auth().onAuthStateChanged((user) => {
 
         firebase
             .firestore()
-            .collection("Points")
+            .collection("lovePoints")
             .onSnapshot(querySnapshot => {
                 console.log(querySnapshot.size);
                 querySnapshot.forEach(doc => {
@@ -464,10 +464,10 @@ firebase.auth().onAuthStateChanged((user) => {
         $('#save').on('click', function () {
             let petNm = document.getElementById('pname').value;
             if (firsttime == 0) {
-                firebase.firestore().collection("Points").add({ Name: email, Points: lovePoints });
+                firebase.firestore().collection("lovePoints").add({ Name: email, Points: lovePoints });
             }
             else {
-                firebase.firestore().collection("Points").doc(docid).update({ Points: lovePoints });
+                firebase.firestore().collection("lovePoints").doc(docid).update({ Points: lovePoints });
             }
         });
 

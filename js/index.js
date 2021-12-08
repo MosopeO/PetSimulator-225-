@@ -48,8 +48,8 @@ $("#help_btn").click(function () {
 $('#signUp').on('click', function (e) {
     e.preventDefault();
     email = document.getElementById('email').value
-    password = 'fffggg'; //document.getElementById('password').value;
-    cpassword = 'fffggg'; //document.getElementById('cpassword').value;
+    password = document.getElementById('password').value;
+    cpassword = document.getElementById('cpassword').value;
 
     console.log('mail' + email)
     console.log('password : ' + password)
@@ -86,7 +86,7 @@ $('#signUp').on('click', function (e) {
 $('#signIn').on('click', function (e) {
     e.preventDefault();
     email = document.getElementById('logInemail').value
-    password = 'fffggg'; //document.getElementById('logInpassword').value;
+    password = document.getElementById('logInpassword').value;
 
     console.log('mail' + logInemail)
     console.log('password : ' + logInpassword)
